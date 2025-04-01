@@ -12,12 +12,12 @@ Este proyecto utiliza Docker y Docker Compose para levantar una instancia de Wor
 
 1.  **Clonar el repositorio (si aplica):** Si este proyecto está en un repositorio Git, clónalo en tu máquina local. Si ya tienes los archivos en tu máquina, omite este paso.
     ```bash
-    git clone <URL_DEL_REPOSITORIO>
-    cd <NOMBRE_DEL_DIRECTORIO>
+    git clone https://github.com/florindofp/2-SMR-AW-WORDPRESS.git
+    cd 2-SMR-AW-WORDPRESS
     ```
     Si no tienes el repositorio, simplemente navega a la carpeta donde tienes el archivo `docker-compose.yml`
 
-2.  **Navegar al directorio del proyecto:** Asegúrate de estar en el directorio donde se encuentra el archivo `docker-compose.yml`. En tu caso, debería ser `/var/www/2smr-aw-wordpress/`.
+2.  **Navegar al directorio del proyecto:** Asegúrate de estar en el directorio donde se encuentra el archivo `docker-compose.yml`. Por ejemplo, si el repositorio está en `/var/www/2smr-aw-wordpress/`.
     ```bash
     cd /var/www/2smr-aw-wordpress/
     ```
@@ -86,5 +86,3 @@ Este proyecto utiliza Docker y Docker Compose para levantar una instancia de Wor
 *   Los archivos de WordPress se almacenan en el volumen `./wp_data` en tu máquina local.
 *   Si necesitas cambiar las credenciales de la base de datos, modifica el archivo `docker-compose.yml` y luego ejecuta `docker-compose down` y `docker-compose up -d` para aplicar los cambios.
 * Si se quiere cambiar el puerto de acceso, se debe modificar la linea `ports` del servicio `wordpress` en el archivo `docker-compose.yml`. Por ejemplo, si se quiere acceder por el puerto 8080, se debe modificar a `8080:80`.
-
-¡Listo! Ahora tienes tu entorno de WordPress funcionando con Docker.
